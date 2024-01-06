@@ -1,0 +1,16 @@
+export const MyColors = {
+    primary: '#F77F00',
+    secondary: '#FCBF49',
+    colorTheme3: '#D62828',
+    colorTheme4: '#EAE2B7',
+    colorTheme5: '#003049',
+    background: '#EEEEEE',
+    white: '#ffffff',
+    black: '#000000',
+    gray: '#cccccc',
+    lightGray: '#eeeeee',
+    darkGray: '#333333',
+    danger: '#e63946',
+    warning: '#f1faee',
+    success: '#a8dadc',
+}
