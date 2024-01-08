@@ -1,7 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen } from "./src/views/home/Home";
-import { RegisterScreen } from "./src/views/register/Register";
+import { HomeScreen } from "./src/Presentation/views/home/Home";
+import { RegisterScreen } from "./src/Presentation/views/register/Register";
+
+import {KeyboardAvoidingView, Platform, StyleSheet} from 'react-native';
 
 export type RootStackParamsList = {
   Home: undefined;
@@ -13,6 +15,10 @@ const Stack = createNativeStackNavigator<RootStackParamsList>();
 const App = () => {
   return (
     <NavigationContainer>
+      <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            style={{flex: 1}}
+        >
       <Stack.Navigator screenOptions={
         {
           headerShown: false,
@@ -23,11 +29,12 @@ const App = () => {
         name="Register" 
         component={RegisterScreen}
         options={{
-          headerShown: true,
+          headerShown: false,
           title: 'Nuevo usuario',
         }}
         />
       </Stack.Navigator>
+      </KeyboardAvoidingView>
     </NavigationContainer>
   );
 }
