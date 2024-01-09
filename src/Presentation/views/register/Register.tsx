@@ -9,7 +9,7 @@ import styles from './RegisterStyles';
 
 export const RegisterScreen = () => {
 
-    const { name, lastName, phone, email, password, passwordConfirm, onChange, register } = useViewModel();
+    const { name, last_name, phone, email, password,  onChange, register } = useViewModel();
 
     return (
         <View style={styles.container}>
@@ -22,7 +22,7 @@ export const RegisterScreen = () => {
             <View style={styles.form}>
                 <Text style={styles.formText}>REGISTRARSE</Text>
                 <CustomTextInput
-                    image={require('../../../../assets/my_user.png')}
+                    image={require('../../../../assets/user.png')}
                     placeholder='Nombres'
                     keyboardType='default'
                     property='name'
@@ -33,9 +33,9 @@ export const RegisterScreen = () => {
                     image={require('../../../../assets/my_user.png')}
                     placeholder='Apellidos'
                     keyboardType='default'
-                    property='lastName'
+                    property='last_name'
                     onChange={onChange}
-                    value={lastName}
+                    value={last_name}
                 />
                 <CustomTextInput
                     image={require('../../../../assets/phone.png')}
@@ -62,7 +62,7 @@ export const RegisterScreen = () => {
                     onChange={onChange}
                     value={password}
                 />
-                <CustomTextInput
+                {/* <CustomTextInput
                     image={require('../../../../assets/confirm_password.png')}
                     placeholder='Confirmar contraseña'
                     keyboardType='default'
@@ -70,7 +70,7 @@ export const RegisterScreen = () => {
                     property='passwordConfirm'
                     onChange={onChange}
                     value={passwordConfirm}
-                />
+                /> */}
                 <View style={{
                     marginTop: 30,
                 }}>
